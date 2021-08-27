@@ -9,6 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class BooksComponent implements OnInit {
   books:any;
+  count:any;
   constructor(private bookService:BooksService) { }
   ngOnInit(): void {
     this.showAll()
@@ -16,6 +17,7 @@ export class BooksComponent implements OnInit {
 showAll(){
     this.bookService.getAll().subscribe(res=>{
       this.books=res
+      this.count=this.books.length
       console.log(this.books)
     })
 }
