@@ -1,0 +1,15 @@
+<form *ngIf="formAdd" [formGroup]="formAdd" (ngSubmit)="add()">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="title" >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput">Author</label>
+    <input type="text" class="form-control" formControlName="author" id="exampleFormControlInput" >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControl">Des</label>
+    <input type="text" class="form-control" id="exampleFormControl"  formControlName="description">
+  </div>
+  <button>add</button>
+</form>

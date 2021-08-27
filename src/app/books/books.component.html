@@ -1,0 +1,26 @@
+<h2>Danh sach cuon sach</h2>
+<a  class="btn btn-success" routerLink="/add">them moi</a>
+<div class="container">
+  <table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Tên</th>
+    <th scope="col">Tác giả</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books,let i=index">
+    <th scope="row">{{i +1}}</th>
+    <td><a routerLink="/{{book.id}}/detail">{{book.title}}</a></td>
+    <td>{{book.author}}</td>
+    <button routerLink="/{{book.id}}/update">edit</button>
+    <button (click)="destroy(book.id)">delete</button>
+
+  </tr>
+  </tbody>
+</table>
+</div>
+
+
